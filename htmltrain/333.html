@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="333.css">
+</head>
+<body>
+    <div id="tip">
+        <i class="icon"></i>
+        <p>为了更好的体验，请使用竖屏浏览</p>
+</div>
+<script>
+     ;(function screenStatus() {
+        const element = document.querySelector('#tip');
+        element.style.visibility = 'hidden';
+        const status = "onorientationchange" in window ? "orientationchange" : "resize";
+        window.addEventListener(status, e => {
+            if (window.orientation === 180 || window.orientation === 0) {
+                element.style.visibility = 'hidden';
+            }
+            if (window.orientation === 90 || window.orientation === -90) {
+                element.style.visibility = 'visible';
+            }
+        });
+    }());
+</script>
+</body>
+</html>

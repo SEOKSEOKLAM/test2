@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;
+    charset=utf-8">
+    <meta name="viewport" content="width=devise-width,
+    initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>歡迎來到2022-2023年度的高三C班
+    </title>
+    <link rel="stylesheet" href="123.css">
+</head>
+</div>
+    <div class="container">  
+        <div class="form-box ">
+            <div class="forget-box hidden">
+                <h1>forget</h1>
+                <input placeholder="請在微信尋求支援 " onfocus="this.blur();">
+                <input placeholder="呼叫支援：林梓爍" onfocus="this.blur();">
+                <button id="comfirm" >己了解</button>
+            </div>
+            <div class="login-box">
+                <h1>login</h1>
+                <h2>(暫時不需要帳號)</h2>
+                <form methon="post">
+                <input type="text" name="name" placeholder="用戶名" ><br>
+                <input type="password" name="password" placeholder="密碼"><br>
+                <button onclick="javascript:window.open('photo.html')">登錄</button></form>
+            </div>
+        </div>
+        <div class="con-box left hidden ">
+            <h2>你<span>忘記密碼</span>了嗎？</h2>
+            <h4>芝士<span>潤霖</span></h4>
+                <img id="pit1" src="run.jpg" width="200" height="200"/>
+            <p>己了解</p>
+            <button id="login">去登錄 </button>
+        </div>
+        <div class="con-box right">
+            <h2>歡迎來到<span>高三C</span>班</h2>
+            <h4>芝士<span>高三C</span></h4>          
+            <img src="s3c.jpg" width="200" height="200"/>
+            <p>忘記了</p>
+            <button id="forget">看看我們的大佬</button>
+        </div>
+    </div>
+    <script>
+        let comfirm=document.getElementById('comfirm')
+        let login=document.getElementById('login');
+        let forget=document.getElementById('forget');
+        let form_box=document.getElementsByClassName('form-box')[0];
+        let forget_box=document.getElementsByClassName('forget-box')[0];
+        let login_box=document.getElementsByClassName('login-box')[0]; 
+        
+        comfirm.addEventListener('click',()=>{
+            form_box.style.transform='translateX(-5%)';
+            forget_box.classList.add('hidden');
+            login_box.classList.remove('hidden');
+        })
+        forget.addEventListener('click',()=>{
+            form_box.style.transform='translateX(89%)';
+            login_box.classList.add('hidden');
+            forget_box.classList.remove('hidden');
+        })
+        login.addEventListener('click',()=>{
+            form_box.style.transform='translateX(-5%)';
+            forget_box.classList.add('hidden');
+            login_box.classList.remove('hidden');
+        })
+    </script>
+    <style>
+        /*竖屏*/
+        @media only screen and (orientation:portrait ) {
+        body *{ display:none;}
+        body{ background-color:lightblue;}
+        body:after{ content:"為了更好的體驗，請使用豎屏遊覽！！！"}
+        }
+        /*横屏*/
+        @media only screen and (orientation:landscape) {
+        
+        }
+        </style>
+</body>
+</html>
